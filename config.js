@@ -18,7 +18,7 @@ window.homepageConfig = {
   group: {
     name: "常志勇课题组",
     organization: "东南大学 机械工程学院",
-    team: "车厘子团队",
+    team: "xxxx团队",
   },
 
   nav: [
