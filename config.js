@@ -1,7 +1,7 @@
 window.homepageConfig = {
   site: {
     title: "常志勇课题组",
-    description: "东南大学 机械工程学院 车厘子团队",
+    description: "东南大学 机械工程学院 xxxx团队",
   },
 
   // 图片路径支持 png、jpg、jpeg、webp、gif 等常见格式。
