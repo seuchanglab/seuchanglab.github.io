@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 360" role="img" aria-label="蓝色光电科研横幅背景">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b4fc3"/>
+      <stop offset=".55" stop-color="#1b74dd"/>
+      <stop offset="1" stop-color="#07429a"/>
+    </linearGradient>
+    <radialGradient id="ring" cx="50%" cy="50%" r="50%">
+      <stop offset=".25" stop-color="#b6f3ff" stop-opacity=".85"/>
+      <stop offset=".38" stop-color="#55d8ff" stop-opacity=".22"/>
+      <stop offset=".75" stop-color="#1f8cff" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#1f8cff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+  </defs>
+  <rect width="1800" height="360" fill="url(#bg)"/>
+  <path d="M-30 296 C300 210 470 305 680 250 C920 188 1070 116 1350 160 C1540 190 1680 136 1840 86" fill="none" stroke="#9de7ff" stroke-opacity=".18" stroke-width="8"/>
+  <path d="M-20 318 C280 244 530 330 770 258 C980 196 1110 162 1338 222 C1542 276 1685 178 1836 134" fill="none" stroke="#ffffff" stroke-opacity=".14" stroke-width="3"/>
+  <g transform="translate(1030 70)">
+    <circle cx="120" cy="95" r="112" fill="url(#ring)"/>
+    <circle cx="120" cy="95" r="58" fill="none" stroke="#a9f1ff" stroke-width="8" stroke-opacity=".45"/>
+    <circle cx="120" cy="95" r="91" fill="none" stroke="#d9ffff" stroke-width="2" stroke-opacity=".24"/>
+    <g fill="#b9f7ff" opacity=".75">
+      <circle cx="120" cy="25" r="9"/>
+      <circle cx="170" cy="42" r="7"/>
+      <circle cx="198" cy="92" r="8"/>
+      <circle cx="171" cy="145" r="7"/>
+      <circle cx="120" cy="168" r="9"/>
+      <circle cx="70" cy="145" r="7"/>
+      <circle cx="42" cy="94" r="8"/>
+      <circle cx="70" cy="42" r="7"/>
+    </g>
+  </g>
+  <g opacity=".22" filter="url(#blur)">
+    <path d="M1350 54 C1470 50 1534 114 1590 210 C1515 218 1412 214 1340 158 C1304 130 1296 78 1350 54Z" fill="#d8f7ff"/>
+    <path d="M1488 24 C1580 48 1652 102 1720 190" fill="none" stroke="#d8f7ff" stroke-width="26" stroke-linecap="round"/>
+  </g>
+  <g opacity=".16">
+    <path d="M0 40 H1800 M0 92 H1800 M0 144 H1800 M0 196 H1800 M0 248 H1800 M0 300 H1800" stroke="#fff"/>
+    <path d="M120 0 V360 M260 0 V360 M410 0 V360 M560 0 V360 M710 0 V360 M860 0 V360 M1010 0 V360 M1160 0 V360 M1310 0 V360 M1460 0 V360 M1610 0 V360" stroke="#fff"/>
+  </g>
+</svg>

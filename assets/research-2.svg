@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 500" role="img" aria-label="全光开关实验系统示意图">
+  <defs>
+    <linearGradient id="table" x1="0" x2="1">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset="1" stop-color="#e9eef8"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="500" fill="#fff"/>
+  <rect x="45" y="50" width="550" height="165" rx="8" fill="url(#table)" stroke="#d1d8e8" stroke-width="4"/>
+  <g stroke-linecap="round" stroke-width="9" fill="none">
+    <path d="M62 138 L190 124 L310 128 L458 96 L596 116" stroke="#31db70"/>
+    <path d="M62 150 L212 138 L330 138 L462 124 L596 170" stroke="#d91f2e"/>
+  </g>
+  <g fill="#333">
+    <rect x="142" y="96" width="82" height="62" rx="6" transform="rotate(-9 183 127)"/>
+    <rect x="282" y="105" width="62" height="50" rx="5"/>
+    <rect x="432" y="76" width="60" height="72" rx="5" transform="rotate(-16 462 112)"/>
+  </g>
+  <g fill="#f05252">
+    <rect x="150" y="84" width="42" height="22" rx="3" transform="rotate(-9 171 95)"/>
+    <rect x="436" y="65" width="34" height="20" rx="3" transform="rotate(-16 453 75)"/>
+  </g>
+  <g transform="translate(72 260)">
+    <rect width="110" height="80" fill="#050505"/>
+    <circle cx="42" cy="40" r="17" fill="#32ff63" filter="url(#glow)"/>
+    <circle cx="84" cy="38" r="4" fill="#ff2038"/>
+  </g>
+  <g transform="translate(198 260)">
+    <rect width="110" height="80" fill="#050505"/>
+    <circle cx="36" cy="38" r="5" fill="#31ff6d"/>
+    <circle cx="84" cy="40" r="18" fill="#ff2038"/>
+  </g>
+  <g transform="translate(324 260)">
+    <rect width="110" height="80" fill="#050505"/>
+    <circle cx="55" cy="40" r="25" fill="none" stroke="#2eff6d" stroke-width="7"/>
+  </g>
+  <g transform="translate(450 260)">
+    <rect width="110" height="80" fill="#050505"/>
+    <circle cx="36" cy="40" r="5" fill="#31ff6d"/>
+    <circle cx="84" cy="40" r="18" fill="#ff2038"/>
+  </g>
+  <g font-family="Arial" font-size="16" fill="#444">
+    <text x="142" y="374">Control</text>
+    <text x="266" y="374">Signal</text>
+    <text x="392" y="374">Switch</text>
+    <text x="514" y="374">On state</text>
+  </g>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 500" role="img" aria-label="等离激元激光示意图">
+  <defs>
+    <radialGradient id="night" cx="50%" cy="40%" r="70%">
+      <stop offset="0" stop-color="#23317a"/>
+      <stop offset=".55" stop-color="#101743"/>
+      <stop offset="1" stop-color="#050b21"/>
+    </radialGradient>
+    <radialGradient id="beam" cx="50%" cy="100%" r="70%">
+      <stop offset="0" stop-color="#ff8dff" stop-opacity=".95"/>
+      <stop offset=".35" stop-color="#9c6cff" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#42d8ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="640" height="500" fill="url(#night)"/>
+  <g opacity=".95">
+    <path d="M315 390 L356 108 L392 390 Z" fill="url(#beam)"/>
+    <path d="M455 390 L490 172 L520 390 Z" fill="url(#beam)"/>
+  </g>
+  <g stroke="#cfe4ff" stroke-width="3" opacity=".95">
+    <path d="M145 116 L145 230 M86 174 H204 M102 132 L188 218 M188 132 L102 218"/>
+    <path d="M428 70 L428 188 M368 129 H488 M386 86 L470 172 M470 86 L386 172"/>
+    <path d="M510 116 L510 230 M452 174 H568 M468 132 L554 218 M554 132 L468 218"/>
+  </g>
+  <g fill="none" stroke-width="2" opacity=".65">
+    <circle cx="145" cy="174" r="46" stroke="#6ebcff"/>
+    <circle cx="428" cy="129" r="50" stroke="#cfa8ff"/>
+    <circle cx="510" cy="174" r="42" stroke="#fff2a8"/>
+  </g>
+  <g transform="translate(80 330)">
+    <rect x="0" y="42" width="500" height="12" fill="#ff6c45"/>
+    <path d="M24 42 C60 15 104 15 138 42 Z" fill="#fff0a6" stroke="#8a552a" stroke-width="3"/>
+    <rect x="50" y="30" width="62" height="12" fill="#8a552a"/>
+    <g stroke="#ff5c41" stroke-width="5">
+      <path d="M215 20 V66 M238 35 V66 M260 12 V66 M282 28 V66"/>
+      <path d="M405 10 V66 M430 32 V66 M455 20 V66"/>
+    </g>
+  </g>
+  <circle cx="566" cy="365" r="34" fill="#ff6f63"/>
+  <circle cx="548" cy="355" r="6" fill="#111"/>
+  <circle cx="578" cy="355" r="6" fill="#111"/>
+  <path d="M550 378 Q566 392 584 378" fill="none" stroke="#111" stroke-width="4" stroke-linecap="round"/>
+</svg>

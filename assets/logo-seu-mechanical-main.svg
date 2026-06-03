@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="东南大学机械工程学院 Logo">
+  <defs>
+    <linearGradient id="coreA" x1="112" x2="394" y1="120" y2="380">
+      <stop offset="0" stop-color="#12b8ee"/>
+      <stop offset=".48" stop-color="#0467c6"/>
+      <stop offset="1" stop-color="#272096"/>
+    </linearGradient>
+    <path id="topTextA" d="M82 252a174 174 0 0 1 348 0"/>
+    <path id="bottomTextA" d="M430 252a174 174 0 0 1-348 0"/>
+  </defs>
+  <circle cx="256" cy="256" r="248" fill="#ffd900" stroke="#0049a8" stroke-width="8"/>
+  <circle cx="256" cy="256" r="180" fill="url(#coreA)"/>
+  <text font-family="Arial, 'Microsoft YaHei', sans-serif" font-weight="900" fill="#0a0a0a">
+    <textPath href="#topTextA" startOffset="50%" text-anchor="middle" font-size="36">东南大学机械工程学院</textPath>
+  </text>
+  <text font-family="Arial, sans-serif" font-size="28" font-weight="900" fill="#0a0a0a" letter-spacing="0">
+    <textPath href="#bottomTextA" startOffset="50%" text-anchor="middle">SCHOOL OF MECHANICAL ENGINEERING</textPath>
+  </text>
+  <g transform="translate(73 86)">
+    <path
+      d="M111 230c-23-37-14-86 23-118 24-21 54-31 93-31-44 19-72 45-85 78 63-52 121-75 188-66-52 15-85 42-116 86 60-37 106-52 151-45-61 27-112 72-155 137 57-20 105-30 153-25-60 33-135 57-207 59-42 1-75-11-93-35-8-11-12-24-11-38 14 10 33 14 59 0z"
+      fill="#fff"/>
+    <path
+      d="M69 175c18-38 47-65 88-81l9-42 30 11 31-26 21 28 45-3 6 33c-67 9-120 42-159 98-19 27-51 50-88 56-10-27-8-53 17-74z"
+      fill="#fff"/>
+    <path d="M85 210c42-8 69-29 98-68 38-51 87-81 146-92" fill="none" stroke="#052b91" stroke-width="10" stroke-linecap="round" opacity=".28"/>
+    <text x="184" y="252" fill="#fff" font-family="Arial, sans-serif" font-size="30" font-weight="900">1916</text>
+  </g>
+  <circle cx="256" cy="256" r="204" fill="none" stroke="#0b4ba0" stroke-width="4"/>
+</svg>

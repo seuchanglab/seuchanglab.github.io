@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 500" role="img" aria-label="三维光子晶体研究示意图">
+  <rect width="640" height="500" fill="#f8fbff"/>
+  <g stroke="#1c1c1c" stroke-width="3" fill="none" opacity=".75">
+    <path d="M58 170 C108 118 154 204 210 142 C260 88 306 178 358 132 C412 82 462 164 530 112"/>
+    <path d="M58 206 C118 158 142 236 205 186 C270 132 306 212 362 164 C416 118 476 194 532 150"/>
+    <path d="M58 240 C112 208 160 274 220 232 C278 192 316 258 374 218 C438 174 478 244 532 206"/>
+  </g>
+  <g transform="translate(72 290)">
+    <polygon points="40,0 155,28 155,140 40,110" fill="#87cdf6"/>
+    <polygon points="155,28 255,0 255,110 155,140" fill="#d8f4ff"/>
+    <polygon points="40,0 140,-36 255,0 155,28" fill="#f1fbff"/>
+    <g fill="#ffcf2f" opacity=".9">
+      <circle cx="71" cy="24" r="10"/><circle cx="118" cy="34" r="9"/><circle cx="151" cy="58" r="10"/>
+      <circle cx="75" cy="78" r="9"/><circle cx="128" cy="95" r="10"/><circle cx="182" cy="92" r="9"/>
+    </g>
+    <g stroke="#315fd0" stroke-width="4" fill="none">
+      <path d="M96 17l50 13 51-15M96 62l50 13 51-15M96 107l50 13 51-15"/>
+      <path d="M96 17v90M146 30v90M197 15v90"/>
+    </g>
+  </g>
+  <g transform="translate(390 250)">
+    <polygon points="40,0 150,25 150,136 40,108" fill="#ededed"/>
+    <polygon points="150,25 252,0 252,110 150,136" fill="#fbfbfb"/>
+    <polygon points="40,0 142,-36 252,0 150,25" fill="#ffffff"/>
+    <g fill="#ffcc22" opacity=".85">
+      <circle cx="76" cy="24" r="8"/><circle cx="121" cy="34" r="8"/><circle cx="166" cy="46" r="8"/>
+      <circle cx="78" cy="78" r="8"/><circle cx="135" cy="92" r="8"/><circle cx="200" cy="84" r="8"/>
+    </g>
+  </g>
+  <g transform="translate(250 130)">
+    <polygon points="70,0 118,26 118,82 70,110 22,82 22,26" fill="#438bc6" stroke="#0d386d" stroke-width="4"/>
+    <path d="M70 15v80M34 31l72 45M106 31L34 76" stroke="#e8f7ff" stroke-width="10" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="学院 Logo 占位图">
+  <circle cx="60" cy="60" r="57" fill="#16346e" stroke="#fff" stroke-width="4"/>
+  <circle cx="60" cy="60" r="45" fill="#fff" stroke="#d9e7ff" stroke-width="3"/>
+  <path d="M28 55 H92 L60 28 Z" fill="#17346e"/>
+  <rect x="34" y="55" width="52" height="28" fill="#17346e"/>
+  <path d="M44 57 V83 M56 57 V83 M68 57 V83 M80 57 V83" stroke="#fff" stroke-width="4"/>
+  <text x="60" y="75" text-anchor="middle" font-size="26" font-family="Arial" font-weight="700" fill="#fff">ES</text>
+  <text x="60" y="108" text-anchor="middle" font-size="8" font-family="Arial" fill="#fff">ELECTRONIC SCIENCE</text>
+</svg>

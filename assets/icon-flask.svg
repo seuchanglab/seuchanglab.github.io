@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 110" role="img" aria-label="烧瓶图标">
+  <path d="M38 8h14v10l-4 3v32l26 41c3 5 0 12-6 12H22c-6 0-9-7-6-12l26-41V21l-4-3Z" fill="#fff" stroke="#333" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M28 80h44l6 11c2 4 0 8-5 8H17c-5 0-7-4-5-8l12-20c5 7 10 9 14 9Z" fill="#315fd0"/>
+  <path d="M43 12h24M35 12h8" stroke="#333" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="48" cy="57" r="3" fill="#333"/>
+  <circle cx="37" cy="70" r="3" fill="#333"/>
+  <circle cx="55" cy="72" r="2.5" fill="#333"/>
+</svg>

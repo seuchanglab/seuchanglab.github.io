@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="学校 Logo 占位图">
+  <circle cx="60" cy="60" r="57" fill="#f5c400" stroke="#111" stroke-width="4"/>
+  <circle cx="60" cy="60" r="45" fill="none" stroke="#111" stroke-width="2"/>
+  <path d="M28 53 L60 28 L92 53 Z" fill="#1b4d2a" stroke="#111" stroke-width="3"/>
+  <rect x="35" y="53" width="50" height="34" rx="3" fill="#fff4b8" stroke="#111" stroke-width="3"/>
+  <rect x="48" y="64" width="24" height="23" fill="#1d2a40"/>
+  <path d="M42 54 V87 M80 54 V87" stroke="#111" stroke-width="3"/>
+  <text x="60" y="18" text-anchor="middle" font-size="10" font-family="Arial" font-weight="700">UNIVERSITY</text>
+  <text x="60" y="106" text-anchor="middle" font-size="10" font-family="Arial" font-weight="700">1902</text>
+</svg>
