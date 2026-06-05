@@ -392,7 +392,7 @@
     .map(
       (item) => `
         <li>
-          <a href="${esc(item.href || "#reports")}">
+          <a${attrsForHref(item.href || "#reports")}>
             <span>${esc(item.date)}</span>
             <strong>${esc(item.type || "报道")}</strong>
             <p>${esc(item.title)}</p>

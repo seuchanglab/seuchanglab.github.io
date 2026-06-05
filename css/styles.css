@@ -686,11 +686,28 @@ img {
 
 .reports-list {
   display: grid;
-  align-content: center;
   gap: 14px;
   margin: 0;
-  padding: 0;
+  max-height: 302px;
+  overflow-y: auto;
+  padding: 0 10px 0 0;
   list-style: none;
+  scrollbar-color: rgba(7, 54, 126, 0.45) rgba(255, 253, 238, 0.46);
+  scrollbar-width: thin;
+}
+
+.reports-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.reports-list::-webkit-scrollbar-track {
+  border-radius: 999px;
+  background: rgba(255, 253, 238, 0.46);
+}
+
+.reports-list::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(7, 54, 126, 0.45);
 }
 
 .reports-list li {
@@ -1626,6 +1643,10 @@ img {
   .updates-section,
   .reports-section {
     padding: 22px;
+  }
+
+  .reports-list {
+    max-height: 540px;
   }
 
   .reports-list a {
