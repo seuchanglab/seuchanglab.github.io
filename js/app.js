@@ -38,6 +38,18 @@
       .replaceAll('"', "&quot;")
       .replaceAll("'", "&#39;");
 
+  const resolveUrl = (value) => {
+    const raw = String(value || "").trim();
+    if (!raw) return "";
+    try {
+      return new URL(raw, window.location.href).href;
+    } catch {
+      return raw;
+    }
+  };
+
+  const cssUrl = (value) => resolveUrl(value).replaceAll("\\", "\\\\").replaceAll('"', '\\"');
+
   const getHrefFile = (href) => {
     const file = String(href || "").split("#")[0].toLowerCase();
     return file || "index.html";
@@ -182,6 +194,15 @@
         href: "index.html#outputs",
       })
     );
+    (config.reports || []).forEach((item) =>
+      addResult({
+        category: item.type || "报道获奖",
+        title: item.title,
+        description: [item.date, item.text].join(" "),
+        href: withPageHref("home", item.href || "#reports"),
+        keywords: [item.type],
+      })
+    );
     (config.researchCards || []).forEach((card) =>
       addResult({
         category: "研究方向",
@@ -287,9 +308,9 @@
     .join("");
 
   const renderHeader = () => `
-    <header class="site-hero ${pageKey === "home" ? "" : "site-hero-compact"}" id="home" style="--hero-bg:url('${esc(
-      config.images?.heroBackground || ""
-    )}')">
+    <header class="site-hero ${pageKey === "home" ? "" : "site-hero-compact"}" id="home" style="--hero-bg:url(&quot;${esc(
+      cssUrl(config.images?.heroBackground || "")
+    )}&quot;)">
       <div class="hero-inner">
         <div class="brand-block">
           <div class="brand-logos">${logosHtml}</div>
@@ -367,13 +388,31 @@
     )
     .join("");
 
+  const reportHtml = (config.reports || [])
+    .map(
+      (item) => `
+        <li>
+          <a href="${esc(item.href || "#reports")}">
+            <span>${esc(item.date)}</span>
+            <strong>${esc(item.type || "报道")}</strong>
+            <p>${esc(item.title)}</p>
+            <small>${esc(item.text)}</small>
+          </a>
+        </li>
+      `
+    )
+    .join("");
+
   const renderHome = () => `
     <main>
       <section class="intro-section" id="research">
         <div class="section-heading">
           <div class="section-title">
             <img src="${esc(config.images?.sectionIcon)}" alt="" />
-            <h2>${esc(config.intro?.title)}</h2>
+            <div class="section-title-copy">
+              <span>Group Profile</span>
+              <h2>${esc(config.intro?.title)}</h2>
+            </div>
           </div>
           <a class="more-link" href="${esc(config.intro?.moreHref)}">${esc(config.intro?.moreLabel)}</a>
         </div>
@@ -388,10 +427,20 @@
 
       <section class="updates-section reveal" id="outputs">
         <div class="updates-copy">
+          <span>Latest News</span>
           <h2>最新动态</h2>
-          <p>这里可以放论文发表、项目进展、招生信息或组会通知。</p>
+          <p>论文发表、项目进展、招生信息或组会通知。</p>
         </div>
         <ul class="updates-list">${updateHtml}</ul>
+      </section>
+
+      <section class="reports-section reveal" id="reports">
+        <div class="reports-copy">
+          <span>Reports & Honors</span>
+          <h2>报道与获奖</h2>
+          <p>团队报道、奖励、成果转化与代表性授权信息。</p>
+        </div>
+        <ul class="reports-list">${reportHtml}</ul>
       </section>
     </main>
   `;
@@ -522,9 +571,9 @@
           <section class="module-section profile-panel reveal">
             <div class="module-heading">
               <span>Profile</span>
-              <h2>个人主页待补充</h2>
+              <h2>个人主页建设中</h2>
             </div>
-            <p>成员个人主页信息暂未补充。</p>
+            <p>研究方向、项目经历和联系方式持续更新。</p>
             <a class="plain-link" href="members.html">返回研究成员</a>
           </section>
         </main>
@@ -553,7 +602,7 @@
                 ${
                   hasExternalProfile
                     ? `<a class="plain-link" href="${esc(person.href)}" target="_blank" rel="noopener noreferrer">访问个人主页</a>`
-                    : `<span class="profile-placeholder">个人主页待补充</span>`
+                    : `<span class="profile-placeholder">个人主页建设中</span>`
                 }
                 <a class="plain-link" href="members.html">返回研究成员</a>
               </div>

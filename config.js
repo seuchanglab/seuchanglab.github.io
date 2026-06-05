@@ -1,13 +1,13 @@
 window.homepageConfig = {
   site: {
     title: "常志勇课题组",
-    description: "东南大学 机械工程学院 xxxx团队",
+    description: "东南大学 机械工程学院 仿生感知与智能装备团队",
   },
 
   // 图片路径支持 png、jpg、jpeg、webp、gif 等常见格式。
-  // 想换素材时，把图片放进 assets 文件夹，然后把这里的路径改成对应文件名即可。
+  // 更换素材时，把图片放进 assets 文件夹，然后把路径改成对应文件名即可。
   images: {
-    heroBackground: "assets/hero-bg.png",
+    heroBackground: "assets/background.jpg",
     logos: [
       { src: "assets/logo-1.png", alt: "东南大学 Logo" },
       { src: "assets/logo-2.png", alt: "东南大学机械工程学院 Logo" },
@@ -18,7 +18,7 @@ window.homepageConfig = {
   group: {
     name: "常志勇课题组",
     organization: "东南大学 机械工程学院",
-    team: "xxxx团队",
+    team: "仿生感知与智能装备团队",
   },
 
   nav: [
@@ -106,13 +106,44 @@ window.homepageConfig = {
     { date: "2023-2026", text: "承担国家自然科学基金联合重点项目，围绕高温高压高湿多相流体中微量硫化氢气液分离和敏感机理开展研究。" },
   ],
 
+  reports: [
+    {
+      date: "2024",
+      type: "获奖",
+      title: "中国商业联合会技术发明奖一等奖",
+      href: "achievements.html",
+      text: "常志勇教授获中国商业联合会技术发明奖一等奖，排名第 1。",
+    },
+    {
+      date: "2023",
+      type: "获奖",
+      title: "吉林省科学技术进步奖一等奖",
+      href: "achievements.html",
+      text: "常志勇教授获吉林省科学技术进步奖一等奖，排名第 1。",
+    },
+    {
+      date: "应用",
+      type: "转化",
+      title: "相关技术在中国石油吉林油田、中国一汽等单位转化应用",
+      href: "achievements.html",
+      text: "围绕气体仿生感知、智能检测与工程装备方向，支撑油田现场和产业场景应用。",
+    },
+    {
+      date: "2025",
+      type: "授权",
+      title: "随钻原位南极冰层痕量气体富集监测装置获授权",
+      href: "achievements.html",
+      text: "发明专利 ZL202411457168.5，公告号 CN119309872B。",
+    },
+  ],
+
   pages: {
     academic: {
       title: "学术科研",
       kicker: "Research",
       summary:
         "团队围绕深海油气水下特种作业机器人、仿生嗅觉导航机器人、高精度气体特异传感阵列和复杂条件气体采样与灵敏探测开展研究，形成从传感芯片、机器人本体与控制，到气体采样检测和智能调控应用的研究链条。",
-      coverImage: "assets/page-academic.png",
+      coverImage: "assets/page-covers/page-academic.jpg",
       sections: [
         {
           title: "深海油气水下特种作业机器人",
@@ -145,8 +176,8 @@ window.homepageConfig = {
       title: "研究成员",
       kicker: "People",
       summary:
-        "成员页面按院士顾问、课题组教师和博士后分组展示。照片、姓名、个人主页和研究方向都可以在配置中直接替换。",
-      coverImage: "assets/page-members.png",
+        "展示院士顾问、课题组教师和博士后成员，呈现团队人才结构、个人主页和主要研究方向。",
+      coverImage: "assets/page-covers/page-members.jpg",
       groups: [
         {
           title: "院士顾问",
@@ -177,7 +208,7 @@ window.homepageConfig = {
               role: "教师",
               image: "assets/member-3.png",
               href: "https://me.seu.edu.cn/wxh/list.htm",
-              desc: "东南大学机械工程学院教师，可围绕团队的仿生传感、智能探测装备和工程实验方向补充具体承担任务。",
+              desc: "东南大学机械工程学院教师，参与团队仿生传感、智能探测装备和工程实验方向研究。",
               tags: ["教师", "仿生传感", "智能探测"],
             },
             {
@@ -185,7 +216,7 @@ window.homepageConfig = {
               role: "教师",
               image: "assets/member-4.png",
               href: "https://ins.seu.edu.cn/zt/list.htm",
-              desc: "相关主页链接已预留，可在配置中补充其在导航、控制、传感或跨学院合作方向中的具体分工。",
+              desc: "参与导航控制、传感探测与跨学院协同研究，支撑团队多学科交叉方向建设。",
               tags: ["教师", "导航控制", "协同研究"],
             },
             {
@@ -246,28 +277,28 @@ window.homepageConfig = {
       title: "研究平台",
       kicker: "Facilities",
       summary:
-        "研究平台用于承载水下特种机器人、气体传感阵列、随钻气体采样与复杂环境探测等方向的样机研制、标定测试和工程验证。",
-      coverImage: "assets/page-platform.png",
+        "研究平台支撑水下特种机器人、气体传感阵列、随钻气体采样与复杂环境探测等方向的样机研制、标定测试和工程验证。",
+      coverImage: "assets/page-covers/page-platform.jpg",
       items: [
         {
           title: "水下特种作业机器人平台",
           image: "assets/platform-1.png",
           href: "#platform-1",
-          desc: "用于水下机器人结构设计、仿生控制、人机交互和集群协同作业方法验证。",
+          desc: "支撑水下机器人结构设计、仿生控制、人机交互和集群协同作业方法验证。",
           specs: ["水下仿生感知", "特种机器人", "集群协同"],
         },
         {
           title: "气体特异传感阵列平台",
           image: "assets/platform-2.png",
           href: "#platform-2",
-          desc: "用于气敏电阻式传感芯片、红外激光传感器和仿生电子鼻的标定、阵列集成与多组分识别。",
+          desc: "开展气敏电阻式传感芯片、红外激光传感器和仿生电子鼻的标定、阵列集成与多组分识别。",
           specs: ["气敏芯片", "红外激光", "仿生电子鼻"],
         },
         {
           title: "复杂条件气体采样与随钻探测平台",
           image: "assets/platform-3.png",
           href: "#platform-3",
-          desc: "用于深空、深海、深地、极地等复杂条件下的气体采样、低浓度组分探测和随钻气测技术验证。",
+          desc: "面向深空、深海、深地、极地等复杂条件开展气体采样、低浓度组分探测和随钻气测技术验证。",
           specs: ["随钻采样", "痕量气体", "复杂环境"],
         },
       ],
@@ -277,8 +308,8 @@ window.homepageConfig = {
       title: "研究成果",
       kicker: "Achievements",
       summary:
-        "本页按照用户提供的《专利论文》表整理，展示 82 条 SCI 论文、25 件发明专利和近三年代表性科研项目。论文链接优先指向 DOI/期刊页面，专利链接优先指向公开专利详情页。",
-      coverImage: "assets/page-achievements.png",
+        "汇集团队 82 条 SCI 论文、25 件发明专利和近三年代表性科研项目，论文链接指向 DOI 或期刊页面，专利链接指向公开专利详情页。",
+      coverImage: "assets/page-covers/page-achievements.jpg",
       groups: [
         {
           title: "代表性论文",
@@ -1049,21 +1080,21 @@ window.homepageConfig = {
               year: "2024-2027",
               title: "深地国家科技重大专项“特深井底钻压精准控制”专题",
               href: "#project-2024-1",
-              desc: "近三年代表性科研项目；公开主页列示经费 341 万元，常志勇教授为负责人。",
+              desc: "近三年代表性科研项目，经费 341 万元，常志勇教授为负责人。",
               tags: ["项目", "深地钻探"],
             },
             {
               year: "2023-2027",
               title: "国家重点研发计划“深海和极地关键技术与装备”专项课题",
               href: "#project-2023-1",
-              desc: "近三年代表性科研项目；公开主页列示经费 875 万元，常志勇教授为负责人。",
+              desc: "近三年代表性科研项目，经费 875 万元，常志勇教授为负责人。",
               tags: ["项目", "深海极地"],
             },
             {
               year: "2023-2026",
               title: "国家自然科学基金联合重点项目",
               href: "#project-2023-2",
-              desc: "近三年代表性科研项目；公开主页列示经费 306 万元，常志勇教授为负责人。",
+              desc: "近三年代表性科研项目，经费 306 万元，常志勇教授为负责人。",
               tags: ["项目", "自然科学基金"],
             },
           ],
@@ -1076,21 +1107,21 @@ window.homepageConfig = {
               year: "2024",
               title: "中国商业联合会技术发明奖一等奖",
               href: "https://me.seu.edu.cn/czy/list.htm",
-              desc: "常志勇教授公开主页列示获中国商业联合会技术发明奖一等奖，排名第 1。",
+              desc: "常志勇教授获中国商业联合会技术发明奖一等奖，排名第 1。",
               tags: ["奖励", "一等奖"],
             },
             {
               year: "2023",
               title: "吉林省科学技术进步奖一等奖",
               href: "https://me.seu.edu.cn/czy/list.htm",
-              desc: "常志勇教授公开主页列示获吉林省科学技术进步奖一等奖，排名第 1。",
+              desc: "常志勇教授获吉林省科学技术进步奖一等奖，排名第 1。",
               tags: ["奖励", "一等奖"],
             },
             {
               year: "应用",
               title: "相关技术在中国石油吉林油田、中国一汽等单位转化应用",
               href: "https://me.seu.edu.cn/czy/list.htm",
-              desc: "公开主页提到相关技术服务东北振兴，并在中国石油吉林油田、中国一汽等单位转化应用。",
+              desc: "相关技术服务东北振兴，并在中国石油吉林油田、中国一汽等单位转化应用。",
               tags: ["成果转化", "工程应用"],
             },
           ],
@@ -1102,8 +1133,8 @@ window.homepageConfig = {
       title: "学习生活",
       kicker: "Life",
       summary:
-        "用于展示组会、实验、团建、学术交流和毕业合影，让页面既有科研氛围，也有团队温度。",
-      coverImage: "assets/page-life.png",
+        "组会、实验、团建、学术交流和毕业合影共同呈现团队科研氛围与日常温度。",
+      coverImage: "assets/page-covers/page-life.jpg",
       photos: [
         { title: "组会交流", image: "assets/life-1.png", href: "#life-1", desc: "每周讨论研究进展，及时梳理问题和下一步计划。" },
         { title: "实验现场", image: "assets/life-2.png", href: "#life-2", desc: "结合真实实验平台开展样机测试和数据分析。" },
@@ -1116,8 +1147,8 @@ window.homepageConfig = {
       title: "招生招聘",
       kicker: "Join Us",
       summary:
-        "常志勇老师主页显示课题组每年招收 3-5 名硕博士研究生，欢迎本科生依托课题组开展深海、极地特种传感与机器人相关项目研究，并长期招聘博士后。",
-      coverImage: "assets/page-recruit.png",
+        "课题组每年招收 3-5 名硕博士研究生，欢迎本科生依托课题组开展深海、极地特种传感与机器人相关项目研究，并长期招聘博士后。",
+      coverImage: "assets/page-covers/page-recruit.jpg",
       positions: [
         {
           title: "硕士研究生",
