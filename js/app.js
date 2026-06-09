@@ -340,9 +340,7 @@
   `;
 
   const renderResearchCard = (card, index) => {
-    const tagList = tagsHtml(card.tags || []);
     const altHtml = card.alt ? `<span class="research-alt">${esc(card.alt)}</span>` : "";
-    const tagListHtml = tagList ? `<span class="research-tags">${tagList}</span>` : "";
     const searchText = [card.title, card.alt, ...(card.tags || [])].join(" ");
 
     return `
@@ -359,7 +357,6 @@
         <span class="research-copy">
           <span class="research-title">${esc(card.title)}</span>
           ${altHtml}
-          ${tagListHtml}
         </span>
       </a>
     `;
@@ -394,7 +391,6 @@
         <li>
           <a${attrsForHref(item.href || "#reports")}>
             <span>${esc(item.date)}</span>
-            <strong>${esc(item.type || "报道")}</strong>
             <p>${esc(item.title)}</p>
             <small>${esc(item.text)}</small>
           </a>
@@ -402,6 +398,52 @@
       `
     )
     .join("");
+
+  const joinHighlightHtml = (config.joinHighlights || [])
+    .map(
+      (item) => `
+        <article class="join-card reveal searchable-card" data-search="${esc([
+          item.title,
+          item.text,
+          ...(item.tags || []),
+        ].join(" "))}">
+          <h3>${esc(item.title)}</h3>
+          <p>${esc(item.text)}</p>
+        </article>
+      `
+    )
+    .join("");
+
+  const studentTasksHtml = (tasks = []) =>
+    tasks.length
+      ? `
+        <div class="student-task-list">
+          <strong>学生可参与</strong>
+          <ul>${tasks.map((task) => `<li>${esc(task)}</li>`).join("")}</ul>
+        </div>
+      `
+      : "";
+
+  const achievementStatsHtml = (stats = []) =>
+    stats.length
+      ? `
+        <section class="module-section achievement-stats-section">
+          <div class="stats-grid">
+            ${stats
+              .map(
+                (item) => `
+                  <article class="stat-card reveal">
+                    <strong>${esc(item.value)}</strong>
+                    <span>${esc(item.label)}</span>
+                    <p>${esc(item.text)}</p>
+                  </article>
+                `
+              )
+              .join("")}
+          </div>
+        </section>
+      `
+      : "";
 
   const renderHome = () => `
     <main>
@@ -422,7 +464,19 @@
         <div class="intro-copy reveal">
           <p>${config.intro?.bodyHtml || ""}</p>
           <p class="recruit-line" id="recruit">${config.intro?.recruitHtml || ""}</p>
+          <div class="home-cta-row">
+            <a href="recruit.html">查看招生方向</a>
+            <a href="academic.html">了解可参与课题</a>
+          </div>
         </div>
+      </section>
+
+      <section class="join-section reveal" id="why-join">
+        <div class="module-heading">
+          <span>Why Join Us</span>
+          <h2>为什么加入我们</h2>
+        </div>
+        <div class="join-grid">${joinHighlightHtml}</div>
       </section>
 
       <section class="updates-section reveal" id="outputs">
@@ -485,7 +539,7 @@
                     <div>
                       <h3>${esc(card.title)}</h3>
                       <p>${esc(card.alt)}</p>
-                      <div class="mini-tags">${tagsHtml(card.tags || [])}</div>
+                      ${studentTasksHtml(card.studentTasks || [])}
                     </div>
                   `,
                   `${attrsForId(getHrefHash(card.href))} data-search="${esc([card.title, card.alt, ...(card.tags || [])].join(" "))}"`
@@ -657,7 +711,6 @@
       `
         <span class="achievement-year">${esc(record.year)}</span>
         <div class="achievement-copy">
-          <span class="achievement-type">${esc(record.type || group.type)}</span>
           <h3>${esc(record.title)}</h3>
           <p>${esc(record.desc)}</p>
           <div class="mini-tags">${tagsHtml(record.tags || [])}</div>
@@ -688,6 +741,7 @@
     return `
       <main class="page-main">
         ${renderPageCover(page)}
+        ${achievementStatsHtml(page.stats || [])}
         <section class="module-section">
           <div class="module-heading">
             <span>Outputs</span>
@@ -755,6 +809,26 @@
   const renderRecruit = (page) => `
     <main class="page-main">
       ${renderPageCover(page)}
+
+      <section class="module-section recruit-fit-section">
+        <div class="module-heading">
+          <span>Fit</span>
+          <h2>什么样的同学适合加入</h2>
+        </div>
+        <div class="join-grid">
+          ${(page.fit || [])
+            .map(
+              (item) => `
+                <article class="join-card reveal searchable-card" data-search="${esc([item.title, item.text].join(" "))}">
+                  <h3>${esc(item.title)}</h3>
+                  <p>${esc(item.text)}</p>
+                </article>
+              `
+            )
+            .join("")}
+        </div>
+      </section>
+
       <section class="module-section">
         <div class="module-heading">
           <span>Join Us</span>
@@ -778,6 +852,16 @@
               `
             )
             .join("")}
+        </div>
+        <div class="recruit-detail-grid">
+          <article class="recruit-detail-card reveal">
+            <h3>培养路径</h3>
+            ${renderBullets(page.training || [])}
+          </article>
+          <article class="recruit-detail-card reveal">
+            <h3>可选课题方向</h3>
+            ${renderBullets(page.directions || [])}
+          </article>
         </div>
         <div class="contact-band reveal">
           <strong>联系方式</strong>
